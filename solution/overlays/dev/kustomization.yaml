@@ -1,11 +1,20 @@
-bases:
-- ../../base
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: dev-ns
 
-namespace: dev
+resources:
+- ../../base
+- ./namespace.yaml
 
 patches:
-- replicas.yaml
+- path: replicas.yaml
+  target:
+    kind: Deployment
+
+namePrefix: dev-
 
 configMapGenerator:
 - name: mykustom-map
-  env: config.properties
+  envs:
+  - config.properties
+  behavior: replace 

@@ -1,3 +1,6 @@
+## Updated to 2025 
+ fixed namespace by overlays, typo for patches, fixed configmapGenerator behavior "replace".
+
 ## Check your version of kubectl
 ```
 kubectl version
