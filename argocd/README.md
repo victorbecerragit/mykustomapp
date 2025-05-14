@@ -22,6 +22,10 @@ rm argocd-linux-amd64
 
 argocd login localhost:8080
 
-# Deploy webapp from this repo
+# Deploy webapp from this repo 
 
 argocd app create helm-webapp --repo https://github.com/victorbecerragit/mykustomapp.git --path helm-chart --dest-server https://kubernetes.default.svc --dest-namespace default
+
+# Deploy argocd application 
+
+kubectl apply -f argocd/argocd-app-webapp.yaml
