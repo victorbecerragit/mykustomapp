@@ -20,8 +20,8 @@ image:
 
 env:
   # This sets the environment variables for the deployment more information can be found here: https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-environment-variables
-  BG_COLOR: "#000000"
-  FONT_COLOR: "#FFFFFF"
+  BG_COLOR: "'#12181b'"
+  FONT_COLOR: "'#FFFFFF'"
   CUSTOM_HEADER: "My Custom Header"
 
   

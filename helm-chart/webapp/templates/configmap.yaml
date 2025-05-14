@@ -7,6 +7,8 @@ metadata:
   namespace: {{ .Values.namespace.name }}   
 data:
   # Environment variables
-  BG_COLOR: {{ .Values.env.BG_COLOR }}
-  FONT_COLOR: {{ .Values.env.FONT_COLOR }}
+  #BG_COLOR: {{ .Values.env.BG_COLOR }}
+  BG_COLOR: "#12181b"
+  #FONT_COLOR: {{ .Values.env.FONT_COLOR }}
+  FONT_COLOR: "#FFFFFF"
   CUSTOM_HEADER: {{ .Values.env.CUSTOM_HEADER }}
