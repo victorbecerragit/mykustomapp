@@ -14,19 +14,19 @@ spec:
     metadata:
       labels:
         app: mywebapp
-    spec: # Pod spec
+    spec: 
       containers:
       - name: mycontainer
-        image: "devopsjourney1/mywebapp:latest"
+        image: devopsjourney1/mywebapp:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8181
         envFrom:
         - configMapRef:
             name: mywebapp-configmapv1.0
         resources:
           requests:
             memory: "16Mi" 
-            cpu: "50m"    # 500milliCPUs (1/2 CPU)
+            cpu: "50m"  
           limits:
             memory: "128Mi"
             cpu: "100m"

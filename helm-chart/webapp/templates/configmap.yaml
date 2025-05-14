@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.name }}
+  labels:
+    app: {{ .Values.name }}
+  namespace: {{ .Values.namespace.name }}   
+data:
+  # Environment variables
+  BG_COLOR: {{ .Values.env.BG_COLOR }}
+  FONT_COLOR: {{ .Values.env.FONT_COLOR }}
+  CUSTOM_HEADER: {{ .Values.env.CUSTOM_HEADER }}
